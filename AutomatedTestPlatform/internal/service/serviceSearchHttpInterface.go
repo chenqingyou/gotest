@@ -34,6 +34,7 @@ func (ss *SearchServiceInterface) InsertSvcPerData(ctx context.Context, xlsxOp d
 			successfulNumber++
 		}
 	}
+
 	for _, value := range per2Res {
 		InsertLoadSearchEngineErrInfo := ss.RepoSearch.SeaDao.DBAnyInsert(ctx, value)
 		if InsertLoadSearchEngineErrInfo != "" {
